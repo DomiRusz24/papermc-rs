@@ -1,0 +1,86 @@
+[package]
+name = "papermc"
+edition = "2021"
+version = "0.1.0"
+description = "PaperMc client, generated from the OpenAPI spec."
+homepage = "https://github.com/domirusz24/papermc-rs"
+documentation = "https://docs.rs/papermc"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/domirusz24/papermc-rs"
+
+[workspace]
+members = []
+
+[dependencies]
+futures = "0.3.25"
+httpclient = "0.18.0"
+serde_json = "1.0.81"
+
+[dependencies.chrono]
+version = "0.4.26"
+features = ["serde"]
+
+[dependencies.serde]
+version = "1.0.137"
+features = ["derive"]
+
+[dev-dependencies.tokio]
+version = "1.18.2"
+features = ["full"]
+
+[lib]
+path = "src/lib.rs"
+name = "papermc"
+doctest = false
+edition = "2021"
+crate-type = ["rlib"]
+required-features = []
+
+[[example]]
+path = "examples/build.rs"
+name = "build"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/builds.rs"
+name = "builds"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/download.rs"
+name = "download"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/family.rs"
+name = "family"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/family_builds.rs"
+name = "family_builds"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/project.rs"
+name = "project"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/projects.rs"
+name = "projects"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/version.rs"
+name = "version"
+edition = "2021"
+required-features = []
